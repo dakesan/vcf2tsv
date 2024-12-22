@@ -1,0 +1,34 @@
+[tool.pyinstaller]
+name = "vcf2tsv"
+onefile = true
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = "^0.3.2"
+clint = "^0.5.1"
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vcf2tsv"
+version = "0.1.0"
+description = "A tool to convert VCF files to TSV format."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+requires-python = ">=3.8"
+dependencies = [
+    "typer==0.3.2",
+    "clint==0.5.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+vcf2tsv = "vcf2tsv.vcf2tsv:app"

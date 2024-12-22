@@ -1,0 +1,3 @@
+.venv
+build
+vcf2tsv.egg-info
