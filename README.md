@@ -24,6 +24,30 @@ To use this script, run the following command:
 vcf2tsv --print-header variants.vcf.gz --output output.tsv
 ```
 
+If you want to use this code in snakemake, you can build conda env be this requirements.yml.
+
+```
+name: vcf2tsv
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - bwa>0.7.17
+  - samtools>=1.10
+  - bcftools>=1.10
+  - blast>=2.2.31
+  - muscle>=3.8.31
+  - primer3>=2.5.0
+  - openblas
+  - pip
+  - setuptools>=64.0.0
+  - wheel
+  - pip:
+    - git+https://github.com/dakesan/vcf2tsv
+```
+
 ## Options
 
 --print-header: Prints the header of the VCF file to the output.
